@@ -1,0 +1,67 @@
+.highlights {
+    position: relative;
+
+    background-color: black;
+
+    width: 250px;
+    height: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    overflow: hidden;
+}
+
+.highlights input {
+    z-index: 2;
+}
+
+.highlights_wrapper {
+    z-index: 1;
+
+    width: 400%;
+    height: 100%;
+
+    position: absolute;
+    display: flex;
+
+    transition: all 1s ease-in-out;
+}
+
+.highlight_element {
+    width: calc(100% / 4);
+    height: 100%;
+}
+
+.highlight_one {
+    background-color: aquamarine;
+}
+
+.highlight_two {
+    background-color: brown;
+}
+
+.highlight_three {
+    background-color: goldenrod;
+}
+
+.highlight_four {
+    background-color: yellow;
+}
+
+.highlights input[value="one"]:checked~.highlights_wrapper {
+    transform: translateX(37.5%);
+}
+
+.highlights input[value="two"]:checked~.highlights_wrapper {
+    transform: translateX(12.5%);
+}
+
+.highlights input[value="three"]:checked~.highlights_wrapper {
+    transform: translateX(-12.5%);
+}
+
+.highlights input[value="four"]:checked~.highlights_wrapper {
+    transform: translateX(-37.5%);
+}
