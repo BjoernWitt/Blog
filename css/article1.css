@@ -114,35 +114,35 @@ input[type="radio"] {
   backface-visibility: hidden;
 }
 
-.beach-picture:nth-of-type(1) {
+.element-one {
   --element-angle: 0deg;
 }
-.beach-picture:nth-of-type(2) {
+.element-two {
   --element-angle: 40deg;
 }
-.beach-picture:nth-of-type(3) {
+.element-three {
   --element-angle: 80deg;
 }
-.beach-picture:nth-of-type(4) {
+.element-four {
   --element-angle: 120deg;
 }
-.beach-picture:nth-of-type(5) {
+.element-five {
   --element-angle: 160deg;
 }
 
-input[value="one"]:checked ~ .main-content-row .top-5-beaches {
+body:has(#picture-one:checked) .top-5-beaches {
   --container-rotate: 0deg;
 }
-input[value="two"]:checked ~ .main-content-row .top-5-beaches {
+body:has(#picture-two:checked) .top-5-beaches {
   --container-rotate: -40deg;
 }
-input[value="three"]:checked ~ .main-content-row .top-5-beaches {
+body:has(#picture-three:checked) .top-5-beaches {
   --container-rotate: -80deg;
 }
-input[value="four"]:checked ~ .main-content-row .top-5-beaches {
+body:has(#picture-four:checked) .top-5-beaches {
   --container-rotate: -120deg;
 }
-input[value="five"]:checked ~ .main-content-row .top-5-beaches {
+body:has(#picture-five:checked) .top-5-beaches {
   --container-rotate: -160deg;
 }
 
@@ -170,26 +170,11 @@ input[value="five"]:checked ~ .main-content-row .top-5-beaches {
   transform: scale(1.1);
 }
 
-input[value="one"]:checked
-  ~ .main-content-row
-  .slider-navigation
-  label[for="picture-one"],
-input[value="two"]:checked
-  ~ .main-content-row
-  .slider-navigation
-  label[for="picture-two"],
-input[value="three"]:checked
-  ~ .main-content-row
-  .slider-navigation
-  label[for="picture-three"],
-input[value="four"]:checked
-  ~ .main-content-row
-  .slider-navigation
-  label[for="picture-four"],
-input[value="five"]:checked
-  ~ .main-content-row
-  .slider-navigation
-  label[for="picture-five"] {
+body:has(#picture-one:checked) .slider-navigation label[for="picture-one"],
+body:has(#picture-two:checked) .slider-navigation label[for="picture-two"],
+body:has(#picture-three:checked) .slider-navigation label[for="picture-three"],
+body:has(#picture-four:checked) .slider-navigation label[for="picture-four"],
+body:has(#picture-five:checked) .slider-navigation label[for="picture-five"] {
   background-color: #4ea487;
 }
 
@@ -269,7 +254,7 @@ input[value="five"]:checked
 }
 
 @media screen and (min-width: 1440px) {
-  body {
+  main {
     padding-left: max(120px, calc(50% - 720px));
     padding-right: max(120px, calc(50% - 720px));
   }
