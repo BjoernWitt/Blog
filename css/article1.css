@@ -13,16 +13,13 @@ body {
   perspective: 1000px;
 }
 
-input[type="radio"] {
-  display: none;
-}
-
 .main-content-row {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 30px;
   padding: 20px;
+  height: auto;
 }
 
 .blog-intro {
@@ -34,7 +31,7 @@ input[type="radio"] {
 
 .sub-title {
   color: #4ea487;
-  font-size: 1.8rem;
+  font-size: 1.25rem;
   font-family: "Palanquin";
   font-weight: 600;
 }
@@ -49,19 +46,58 @@ input[type="radio"] {
 .lead-text {
   color: #54370d;
   font-family: "Palanquin";
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+}
+.meta-info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.meta-info span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+}
+.meta-info span img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .author-sidebar {
   width: 100%;
-  padding: 30px 20px;
+
   background-color: #4ea48733;
   border-radius: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 15px;
+}
+
+.author-sidebar > h2 {
+  font-family: "Arima";
+  font-weight: bold;
+  line-height: 100%;
+  font-size: 18px;
+
+  margin-top: 15px;
+}
+
+.author-sidebar > p:first-of-type {
+  font-family: "Arima";
+  line-height: 100%;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.author-sidebar > p {
+  font-family: "Palanquin";
+  line-height: 120%;
 }
 
 .img-wrapper {
@@ -80,104 +116,6 @@ input[type="radio"] {
   left: -30px;
 }
 
-.top-5-beaches-section {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.top-5-beaches {
-  position: relative;
-  z-index: 1;
-  width: 150px;
-  height: 240px;
-  transform-style: preserve-3d;
-  --container-rotate: 0deg;
-  transform: translateZ(-250px) rotateY(var(--container-rotate));
-  transition: transform 0.7s ease-in-out;
-}
-
-.beach-picture {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  box-shadow: -9px 5px 20px rgba(0, 0, 0, 0.25);
-  border-radius: 16px;
-  transform: rotateY(var(--element-angle)) translateZ(250px);
-  backface-visibility: hidden;
-}
-
-.element-one {
-  --element-angle: 0deg;
-}
-.element-two {
-  --element-angle: 40deg;
-}
-.element-three {
-  --element-angle: 80deg;
-}
-.element-four {
-  --element-angle: 120deg;
-}
-.element-five {
-  --element-angle: 160deg;
-}
-
-body:has(#picture-one:checked) .top-5-beaches {
-  --container-rotate: 0deg;
-}
-body:has(#picture-two:checked) .top-5-beaches {
-  --container-rotate: -40deg;
-}
-body:has(#picture-three:checked) .top-5-beaches {
-  --container-rotate: -80deg;
-}
-body:has(#picture-four:checked) .top-5-beaches {
-  --container-rotate: -120deg;
-}
-body:has(#picture-five:checked) .top-5-beaches {
-  --container-rotate: -160deg;
-}
-
-.slider-navigation {
-  display: flex;
-  gap: 15px;
-  margin-top: 20px;
-  z-index: 10;
-}
-
-.buttons {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-color: #4ea4874d;
-  cursor: pointer;
-  border-radius: 50%;
-  transition:
-    background-color 0.3s,
-    transform 0.2s;
-}
-
-.buttons:hover {
-  background-color: #4ea4874d;
-  transform: scale(1.1);
-}
-
-body:has(#picture-one:checked) .slider-navigation label[for="picture-one"],
-body:has(#picture-two:checked) .slider-navigation label[for="picture-two"],
-body:has(#picture-three:checked) .slider-navigation label[for="picture-three"],
-body:has(#picture-four:checked) .slider-navigation label[for="picture-four"],
-body:has(#picture-five:checked) .slider-navigation label[for="picture-five"] {
-  background-color: #4ea487;
-}
-
 @media screen and (min-width: 768px) {
   header {
     width: 100%;
@@ -192,64 +130,23 @@ body:has(#picture-five:checked) .slider-navigation label[for="picture-five"] {
 
   .sub-title {
     font-size: 2.5rem;
+    line-height: 120%;
   }
   .main-title {
     font-size: 4rem;
+    line-height: 120%;
   }
   .lead-text {
     font-size: 2rem;
+    line-height: 120%;
+  }
+
+  .meta-info {
+    gap: 32px;
   }
 
   .author-sidebar {
-    width: 35%;
-    height: 400px;
-  }
-
-  .slider-navigation {
-    display: none !important;
-  }
-
-  .top-5-beaches-section {
-    gap: 60px;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  .top-5-beaches-section h2 {
-    font-size: 2rem;
-  }
-
-  .top-5-beaches {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 440px;
-
-    transform: none !important;
-    transform-style: flat;
-  }
-
-  .beach-picture {
-    position: relative;
-    width: 20%;
-    height: auto;
-    margin: 0 -25px;
-    object-position: 45% center;
-    backface-visibility: visible;
-
-    /* Überschreibt die mobilen Kreis-Winkel komplett */
-    transform: perspective(250px) rotateY(5deg) translateX(-20px) !important;
-    transition: all 250ms ease-in-out;
-  }
-
-  .beach-picture:hover {
-    z-index: 2;
-    transform: perspective(250px) rotateY(0deg) translateX(0px) scaleX(1.8)
-      scaleY(1.2) !important;
-  }
-
-  .beach-picture:hover ~ .beach-picture {
-    transform: perspective(250px) rotateY(-20deg) translateX(20px) !important;
+    width: 30%;
   }
 }
 
