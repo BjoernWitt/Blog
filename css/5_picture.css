@@ -26,6 +26,7 @@ input[type="radio"] {
   --container-rotate: 0deg;
   transform: translateZ(-250px) rotateY(var(--container-rotate));
   transition: transform 0.7s ease-in-out;
+  margin: 0px clamp(20px, 8vw, 100px) 0px;
 }
 
 .beach-picture {

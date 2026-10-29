@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   position: relative;
-  margin: 60px clamp(20px, 8vw, 100px) 20px;
+  margin: 80px clamp(20px, 8vw, 100px) 20px;
 }
 
 .pro-tipps-label {

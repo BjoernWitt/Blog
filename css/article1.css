@@ -121,12 +121,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 36px;
-  padding: 20px;
+  margin: 40px clamp(20px, 8vw, 100px) 40px;
 }
 
 .main-information-list {
-  margin-left: 100px;
-  margin-right: 100px;
+  margin: 0px clamp(20px, 8vw, 100px) 0px;
 }
 
 .main-information p {
@@ -146,7 +145,7 @@ body {
 
 .closing-remarks {
   display: flex;
-  padding: 20px;
+  margin: 0px clamp(20px, 8vw, 100px) 0px;
   font-family: "Palanquin";
   line-height: 120%;
 }
