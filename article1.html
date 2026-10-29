@@ -12,6 +12,17 @@
     <link rel="stylesheet" href="./css/footer.css" />
   </head>
   <body>
+    <input
+      type="radio"
+      name="beach-slider"
+      id="picture-one"
+      value="one"
+      checked
+    />
+    <input type="radio" name="beach-slider" id="picture-two" value="two" />
+    <input type="radio" name="beach-slider" id="picture-three" value="three" />
+    <input type="radio" name="beach-slider" id="picture-four" value="four" />
+    <input type="radio" name="beach-slider" id="picture-five" value="five" />
     <header>
       <p>Header</p>
     </header>
@@ -62,32 +73,42 @@
 
       <section class="top-5-beaches-section">
         <h2>Top 5 beach destinations for 2026</h2>
+
         <div class="top-5-beaches">
           <img
             class="beach-picture"
             src="./assets/img/beach_1.jpg"
-            alt="Beach_1"
+            alt="Beach 1"
           />
           <img
             class="beach-picture"
             src="./assets/img/beach_2.jpg"
-            alt="Beach_2"
+            alt="Beach 2"
           />
           <img
             class="beach-picture"
             src="./assets/img/beach_3.jpg"
-            alt="Beach_3"
+            alt="Beach 3"
           />
           <img
             class="beach-picture"
             src="./assets/img/beach_4.jpg"
-            alt="Beach_4"
+            alt="Beach 4"
           />
           <img
             class="beach-picture"
             src="./assets/img/beach_5.jpg"
-            alt="Beach_5"
+            alt="Beach 5"
           />
+        </div>
+
+        <!-- Diese Navigation wird NUR auf dem Smartphone angezeigt -->
+        <div class="slider-navigation">
+          <label for="picture-one" class="buttons"></label>
+          <label for="picture-two" class="buttons"></label>
+          <label for="picture-three" class="buttons"></label>
+          <label for="picture-four" class="buttons"></label>
+          <label for="picture-five" class="buttons"></label>
         </div>
       </section>
     </main>

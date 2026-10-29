@@ -10,8 +10,187 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  perspective: 1000px;
+}
 
+input[type="radio"] {
+  display: none;
+}
+
+.main-content-row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+}
+
+.blog-intro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sub-title {
+  color: #4ea487;
+  font-size: 1.8rem;
+  font-family: "Palanquin";
+  font-weight: 600;
+}
+
+.main-title {
+  color: #f1c953;
+  font-family: "Arima";
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.lead-text {
+  color: #54370d;
+  font-family: "Palanquin";
+  font-size: 1.2rem;
+}
+
+.author-sidebar {
+  width: 100%;
+  padding: 30px 20px;
+  background-color: #4ea48733;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.img-wrapper {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
   overflow: hidden;
+  position: relative;
+}
+
+.author-img {
+  width: 125%;
+  height: 125%;
+  object-fit: cover;
+  position: absolute;
+  left: -30px;
+}
+
+.top-5-beaches-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.top-5-beaches {
+  position: relative;
+  z-index: 1;
+  width: 150px;
+  height: 240px;
+  transform-style: preserve-3d;
+  --container-rotate: 0deg;
+  transform: translateZ(-250px) rotateY(var(--container-rotate));
+  transition: transform 0.7s ease-in-out;
+}
+
+.beach-picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: -9px 5px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  transform: rotateY(var(--element-angle)) translateZ(250px);
+  backface-visibility: hidden;
+}
+
+.beach-picture:nth-of-type(1) {
+  --element-angle: 0deg;
+}
+.beach-picture:nth-of-type(2) {
+  --element-angle: 40deg;
+}
+.beach-picture:nth-of-type(3) {
+  --element-angle: 80deg;
+}
+.beach-picture:nth-of-type(4) {
+  --element-angle: 120deg;
+}
+.beach-picture:nth-of-type(5) {
+  --element-angle: 160deg;
+}
+
+input[value="one"]:checked ~ .main-content-row .top-5-beaches {
+  --container-rotate: 0deg;
+}
+input[value="two"]:checked ~ .main-content-row .top-5-beaches {
+  --container-rotate: -40deg;
+}
+input[value="three"]:checked ~ .main-content-row .top-5-beaches {
+  --container-rotate: -80deg;
+}
+input[value="four"]:checked ~ .main-content-row .top-5-beaches {
+  --container-rotate: -120deg;
+}
+input[value="five"]:checked ~ .main-content-row .top-5-beaches {
+  --container-rotate: -160deg;
+}
+
+.slider-navigation {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  z-index: 10;
+}
+
+.buttons {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #4ea4874d;
+  cursor: pointer;
+  border-radius: 50%;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+}
+
+.buttons:hover {
+  background-color: #4ea4874d;
+  transform: scale(1.1);
+}
+
+input[value="one"]:checked
+  ~ .main-content-row
+  .slider-navigation
+  label[for="picture-one"],
+input[value="two"]:checked
+  ~ .main-content-row
+  .slider-navigation
+  label[for="picture-two"],
+input[value="three"]:checked
+  ~ .main-content-row
+  .slider-navigation
+  label[for="picture-three"],
+input[value="four"]:checked
+  ~ .main-content-row
+  .slider-navigation
+  label[for="picture-four"],
+input[value="five"]:checked
+  ~ .main-content-row
+  .slider-navigation
+  label[for="picture-five"] {
+  background-color: #4ea487;
 }
 
 @media screen and (min-width: 768px) {
@@ -19,78 +198,33 @@ body {
     width: 100%;
     background-color: bisque;
   }
-  .main-content-row {
-    width: 100%;
-    margin: 0 auto;
 
-    display: flex;
+  .main-content-row {
     flex-direction: row;
     gap: 20px;
     padding: 100px;
   }
 
-  .blog-intro {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
   .sub-title {
-    color: #4ea487;
     font-size: 2.5rem;
-    font-family: "Palanquin";
-    font-weight: 600;
-    line-height: 120%;
   }
-
   .main-title {
-    color: #f1c953;
-    font-family: "Arima";
     font-size: 4rem;
-    font-weight: bold;
-    line-height: 120%;
   }
   .lead-text {
-    color: #54370d;
-    font-family: "Palanquin";
     font-size: 2rem;
-    font-weight: 400;
-    line-height: 120%;
   }
+
   .author-sidebar {
     width: 35%;
     height: 400px;
-    background-color: #4ea48733;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .img-wrapper {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-  }
-  .author-img {
-    width: 125%;
-    height: 125%;
-    object-fit: cover;
-    position: absolute;
-
-    left: -30px;
   }
 
-  /* Picture rotate design in article1.html*/
+  .slider-navigation {
+    display: none !important;
+  }
+
   .top-5-beaches-section {
-    width: 100%;
-    margin: 0 auto;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     gap: 60px;
     padding-left: 30px;
     padding-right: 30px;
@@ -101,45 +235,37 @@ body {
   }
 
   .top-5-beaches {
-    z-index: 1;
-    height: 440px;
-    width: 100%;
-    max-width: 1100px;
-
     display: flex;
     justify-content: center;
+    width: 100%;
+    height: 440px;
+
+    transform: none !important;
+    transform-style: flat;
   }
 
   .beach-picture {
-    z-index: 1;
-    width: 25%;
-    height: 100%;
+    position: relative;
+    width: 20%;
+    height: auto;
+    margin: 0 -25px;
+    object-position: 45% center;
+    backface-visibility: visible;
 
-    object-fit: cover;
-    object-position: center;
-
-    /* https://smoothshadows.com/#djEsMSwxLDAuMjUsMjAsNSwtOSwjMDAwMDAwLCNmM2Y0ZjYsI2ZmZmZmZiwy */
-    box-shadow: -9px 5px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 16px;
-
-    transform: perspective(250px) rotateY(10deg) translateX(-20px);
-    transform-origin: 50% 50%;
-
+    /* Überschreibt die mobilen Kreis-Winkel komplett */
+    transform: perspective(250px) rotateY(5deg) translateX(-20px) !important;
     transition: all 250ms ease-in-out;
   }
 
   .beach-picture:hover {
     z-index: 2;
-
     transform: perspective(250px) rotateY(0deg) translateX(0px) scaleX(1.8)
-      scaleY(1.2);
+      scaleY(1.2) !important;
   }
 
   .beach-picture:hover ~ .beach-picture {
-    transform: perspective(250px) rotateY(-20deg) translateX(20px);
+    transform: perspective(250px) rotateY(-20deg) translateX(20px) !important;
   }
-
-  /*Picture rotate design end */
 }
 
 @media screen and (min-width: 1440px) {
