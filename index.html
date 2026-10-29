@@ -1,49 +1,78 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Blog-3300</title>
 
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/highlights.css" />
-    <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="./css/footer.css" />
-  </head>
+    <link rel='stylesheet' href='./css/main.css'>
+    <link rel='stylesheet' href='./css/font.css'>    
+    <link rel='stylesheet' href='./css/highlights.css'>
+    <link rel='stylesheet' href='./css/landing-page.css'>
+    <link rel='stylesheet' href='./css/header.css'>
+    <link rel='stylesheet' href='./css/footer.css'>
+</head>
 
-  <body>
+<body>
     <header>
-      <p>Header</p>
+        <div class="nav-bar">
+            <img src="./assets/img/logo-travel-blog.svg" alt="Logo der Seite" />
+            <a href="./index.html#highlights">Highlights</a>
+            <a href="./index.html#faq">FAQ</a>
+            <a href="./index.html#contact">Contact</a>
+        </div>
     </header>
 
     <section>
-      <p>Title</p>
+        <p>Title</p>
     </section>
 
-    <section class="highlights">
-      <input name="slider" type="radio" value="one" checked />
-      <input name="slider" type="radio" value="two" />
-      <input name="slider" type="radio" value="three" />
-      <input name="slider" type="radio" value="four" />
+    <section id="highlights" class="highlight-section">
+        <div class="highlights">
+            <input class="highlight-slider" name="slider" type="radio" value="one" checked>
+            <input class="highlight-slider" name="slider" type="radio" value="two">
+            <input class="highlight-slider" name="slider" type="radio" value="three">
+            <input class="highlight-slider" name="slider" type="radio" value="four">        
+            <div class="highlights_wrapper">
+                <div class="highlight_element highlight_one">
+                    <a href="./article1.html">
+                        <div>
 
-      <div class="highlights_wrapper">
-        <div class="highlight_element highlight_one">
-          <a href="./article1.html">1</a>
+                        </div>
+                        <img class="picture" src="./assets/img/Beach_5.jpg" alt="Bild mit Strand">
+                    </a>
+                </div>
+                <div class="highlight_element highlight_two">
+                    <a href="./article2.html">
+                        <img class="picture" src="./assets/img/Scandinavia.jpg" alt="Bild Scandinavia">
+                    </a>
+                </div>
+                <div class="highlight_element highlight_three">
+                    <a href="./article3.html">
+                        <img class="picture" src="./assets/img/Pattaya.jpg" alt="Bild von Pattaya">
+                    </a>
+                </div>
+                <div class="highlight_element highlight_four">
+                        <img class="picture" src="./assets/img/Fuji.jpg" alt="Bild von Fuji">                    
+                </div>
+            </div>
         </div>
-        <div class="highlight_element highlight_two">
-          <a href="./article2.html">2</a>
-        </div>
-        <div class="highlight_element highlight_three">
-          <a href="./article3.html">3</a>
-        </div>
-        <div class="highlight_element highlight_four">
-          <a href="./impressum.html">4</a>
-        </div>
-      </div>
     </section>
+
+    <section id="faq">
+        FAQ
+    </section>
+
+    <section id="contact">
+        Contact
+    </section>
+
+
 
     <footer>
-      <p>Footer</p>
+        <p>Footer</p>
     </footer>
-  </body>
+</body>
+
 </html>

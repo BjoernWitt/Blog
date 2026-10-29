@@ -1,0 +1,7 @@
+.highlight-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;    
+    padding: 120px max(calc(50% - 720px), 160px) 120px max(calc(50% - 720px), 160px);
+}
