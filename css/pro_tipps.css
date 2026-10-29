@@ -1,7 +1,6 @@
 .pro-tipps-section {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  margin: 60px 20px 20px;
   position: relative;
   margin: 60px clamp(20px, 8vw, 100px) 20px;
 }
