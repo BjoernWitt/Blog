@@ -51,3 +51,10 @@
 .pro-tipps-content a:visited {
   text-decoration: none;
 }
+
+@media screen and (min-width: 768px) {
+  .pro-tipps-label {
+    top: -55px;
+    left: -50px;
+  }
+}
