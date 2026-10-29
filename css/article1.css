@@ -124,6 +124,11 @@ body {
   padding: 20px;
 }
 
+.main-information-list {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
 .main-information p {
   font-family: "Palanquin";
   font-size: 1rem;
