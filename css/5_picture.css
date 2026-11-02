@@ -162,7 +162,6 @@ body:has(#picture-five:checked) .slider-navigation label[for="picture-five"] {
     object-position: 45% center;
     backface-visibility: visible;
 
-    /* Überschreibt die mobilen Kreis-Winkel komplett */
     transform: perspective(250px) rotateY(5deg) translateX(-20px) !important;
     transition: all 250ms ease-in-out;
   }
@@ -174,5 +173,12 @@ body:has(#picture-five:checked) .slider-navigation label[for="picture-five"] {
 
   .beach-picture:hover ~ .beach-picture {
     transform: perspective(250px) rotateY(-20deg) translateX(20px) !important;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    padding-left: max(120px, calc(50% - 720px));
+    padding-right: max(120px, calc(50% - 720px));
   }
 }
