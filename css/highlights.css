@@ -14,8 +14,9 @@
     border-top-right-radius: 100px;    
 }
 
-.highlights input {
+.highlight-slider {
     z-index: 2;
+    padding-bottom: 44px;
 }
 
 .highlights_wrapper {

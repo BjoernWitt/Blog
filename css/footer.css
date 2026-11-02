@@ -1,5 +1,31 @@
 footer {
-    width: 100%;
-    height: 152px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px max(calc(50% - 720px), 120px) 0px max(calc(50% - 720px), 120px);   
     background-color: #4EA487;
+    height: 152px;
+}
+
+footer img {
+    height: 32px;
+}
+
+footer a {
+    font-family: 'Palanquin';
+    font-size: 18px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+footer > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+    gap: 16px;
+}
+
+.footer-logo {
+    height: 44px;
 }
