@@ -1,7 +1,50 @@
 .highlight-section {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: white;    
-    padding: 120px max(calc(50% - 720px), 160px) 120px max(calc(50% - 720px), 160px);
+/*    border: 1px solid black;*/
+    padding: 88px max(calc(50% - 720px), 160px) 88px max(calc(50% - 720px), 160px);
+}
+
+.header-and-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    padding-bottom: 88px;
+}
+
+.header-and-text > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 24px;    
+}
+
+.header-and-text h2 {
+    color: #4ea487;
+    font-family: 'Arima';
+    font-weight: 700;
+    font-family: Arima;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 52px;
+    line-height: 120%;
+    letter-spacing: 0%;
+}
+
+.header-and-text p {
+    color: #54370D;
+    font-size: 24px;
+    font-family: 'Palanquin';
+    font-weight: 700;
+    max-width: 70ch;
+    text-align: center;
+}
+
+.header-and-text img {
+    height: 48px;
+    padding-right: 8px;
 }
