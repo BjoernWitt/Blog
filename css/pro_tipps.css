@@ -39,6 +39,9 @@
 
 .pro-tipps-content ol {
   padding: 30px;
+  font-size: 1rem;
+  font-family: "Palanquin";
+  line-height: 120%;
 }
 
 .pro-tipps-content a {
@@ -55,5 +58,9 @@
   .pro-tipps-label {
     top: -55px;
     left: -50px;
+  }
+
+  .pro-tipps-content ol {
+    font-size: 1.5rem;
   }
 }

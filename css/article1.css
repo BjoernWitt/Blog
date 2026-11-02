@@ -122,6 +122,8 @@ body {
   flex-direction: column;
   gap: 36px;
   margin: 40px clamp(20px, 8vw, 100px) 40px;
+
+  font-size: 1rem;
 }
 
 .main-information-list {
@@ -130,7 +132,7 @@ body {
 
 .main-information p {
   font-family: "Palanquin";
-  font-size: 1rem;
+
   line-height: 120%;
 }
 
@@ -139,6 +141,13 @@ body {
   font-family: "Palanquin";
   line-height: 120%;
 }
+
+.main-information ul {
+  padding: 30px;
+  font-family: "Palanquin";
+  line-height: 120%;
+}
+
 .main-information span {
   font-weight: bold;
 }
@@ -146,6 +155,7 @@ body {
 .closing-remarks {
   display: flex;
   margin: 0px clamp(20px, 8vw, 100px) 0px;
+  font-size: 1rem;
   font-family: "Palanquin";
   line-height: 120%;
 }
@@ -181,6 +191,13 @@ body {
 
   .author-sidebar {
     width: 30%;
+  }
+
+  .main-information {
+    font-size: 1.5rem;
+  }
+  .closing-remarks {
+    font-size: 1.5rem;
   }
 }
 
