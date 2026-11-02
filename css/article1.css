@@ -169,7 +169,7 @@ body {
   .main-content-row {
     flex-direction: row;
     gap: 20px;
-    padding: 100px;
+    padding: 100px 120px;
   }
 
   .sub-title {
