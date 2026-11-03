@@ -13,12 +13,20 @@ body {
   perspective: 1000px;
 }
 
+main {
+  width: 100%;
+  max-width: 1440px;
+
+  padding: 0 clamp(16px, calc(-13.714px + 9.286vw), 120px)
+    clamp(16px, calc(11.429px + 1.429vw), 32px);
+}
+
 .main-content-row {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding: 20px;
+  padding: clamp(24px, calc(8px + 5vw), 80px) 0;
   height: auto;
 }
 
@@ -26,27 +34,29 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 15px;
 }
 
 .sub-title {
   color: #4ea487;
-  font-size: 1.25rem;
+  font-size: clamp(20px, calc(14.286px + 1.786vw), 40px);
   font-family: "Palanquin";
   font-weight: 600;
+  line-height: 120%;
 }
 
 .main-title {
   color: #f1c953;
   font-family: "Arima";
-  font-size: 2.5rem;
+  font-size: clamp(40px, calc(33.143px + 2.143vw), 64px);
+  line-height: 120%;
   font-weight: bold;
 }
 
 .lead-text {
   color: #54370d;
   font-family: "Palanquin";
-  font-size: 1.1rem;
+  font-size: clamp(18px, calc(15.143px + 0.893vw), 28px);
+  line-height: 120%;
 }
 .meta-info {
   width: 100%;
@@ -54,6 +64,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 24px;
+  margin: clamp(24px, calc(19.429px + 1.429vw), 40px) 0 0;
 }
 .meta-info span {
   display: flex;
@@ -83,21 +94,23 @@ body {
   font-family: "Arima";
   font-weight: bold;
   line-height: 100%;
-  font-size: 18px;
+  font-size: clamp(16px, calc(15.429px + 0.179vw), 18px);
 
   margin-top: 15px;
 }
 
-.author-sidebar > p:first-of-type {
+.author {
   font-family: "Arima";
   line-height: 100%;
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-size: clamp(16px, calc(15.429px + 0.179vw), 18px);
 }
 
-.author-sidebar > p {
+.author-info {
   font-family: "Palanquin";
   line-height: 120%;
+  font-size: 1rem;
+  margin: 12px clamp(8px, calc(5.714px + 0.714vw), 16px);
+  text-align: center;
 }
 
 .img-wrapper {
@@ -121,13 +134,13 @@ body {
   display: flex;
   flex-direction: column;
   gap: 36px;
-  margin: 40px clamp(20px, 8vw, 100px) 40px;
+  padding: clamp(24px, calc(8px + 5vw), 80px) 0;
 
-  font-size: 1rem;
+  font-size: clamp(16px, calc(13.714px + 0.714vw), 24px);
 }
 
 .main-information-list {
-  margin: 0px clamp(20px, 8vw, 100px) 0px;
+  margin: 0 clamp(20px, calc(-2.857px + 7.143vw), 100px);
 }
 
 .main-information p {
@@ -154,8 +167,8 @@ body {
 
 .closing-remarks {
   display: flex;
-  margin: 0px clamp(20px, 8vw, 100px) 0px;
-  font-size: 1rem;
+  padding: clamp(24px, calc(8px + 5vw), 80px) 0;
+  font-size: clamp(16px, calc(13.714px + 0.714vw), 24px);
   font-family: "Palanquin";
   line-height: 120%;
 }
@@ -163,26 +176,14 @@ body {
 @media screen and (min-width: 768px) {
   header {
     width: 100%;
-    background-color: bisque;
+  }
+  footer {
+    width: 100%;
   }
 
   .main-content-row {
     flex-direction: row;
-    gap: 20px;
-    padding: 100px 120px;
-  }
-
-  .sub-title {
-    font-size: 2.5rem;
-    line-height: 120%;
-  }
-  .main-title {
-    font-size: 4rem;
-    line-height: 120%;
-  }
-  .lead-text {
-    font-size: 2rem;
-    line-height: 120%;
+    align-items: flex-start;
   }
 
   .meta-info {
@@ -192,18 +193,7 @@ body {
   .author-sidebar {
     width: 30%;
   }
-
-  .main-information {
-    font-size: 1.5rem;
-  }
-  .closing-remarks {
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  main {
-    padding-left: max(120px, calc(50% - 720px));
-    padding-right: max(120px, calc(50% - 720px));
+  .author-info {
+    text-align: left;
   }
 }
