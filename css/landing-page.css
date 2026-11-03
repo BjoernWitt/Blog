@@ -1,3 +1,7 @@
+section {
+    padding-bottom: 120px;
+}
+
 .highlight-section {
     display: flex;
     flex-direction: column;
@@ -47,4 +51,59 @@
 .header-and-text img {
     height: 48px;
     padding-right: 8px;
+}
+
+
+details {
+    background-color: #F1C953;
+    margin: 32px max(calc(50% - 720px), 120px) 0px max(calc(50% - 720px), 120px);    
+    height: 61;
+    gap: 8px;
+    border-radius: 12px;
+    padding-top: 16px;
+    padding-right: 14px;
+    padding-bottom: 16px;
+    padding-left: 14px;
+}
+
+details > p {
+    border-radius: 5px;
+    padding-top: 4px;
+    padding-right: 10px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    background-color: #FFFFFF;
+    color: #363534;
+    font-family: Palanquin;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+}
+
+summary {
+    display: flex;
+    justify-content: space-between; /* Schiebt Text nach links und Icon nach rechts */
+    align-items: center;     
+    color: #54370D;
+    font-size: 24px;
+    font-family: 'Palanquin';
+    font-weight: 700;
+    padding: 0px;
+    padding-bottom: 12px;
+    height: 24px;
+}
+
+summary::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background: url('../assets/icons/faq-arrow.svg');
+    background-size: cover;
+    transition: 0.2s;
+}
+
+details[open] > summary::after {
+  transform: rotate(180deg);
 }
