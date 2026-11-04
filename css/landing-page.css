@@ -162,9 +162,9 @@ details[open] > summary::after {
 
 .confirm {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-/*    border: 1px solid red;      */
+    align-items: center;
     padding-top: 16px;
 }
 
@@ -175,21 +175,65 @@ details[open] > summary::after {
     font-size: 15px;
     line-height: 120%;
     letter-spacing: 0%;
+    padding-bottom: 57px;
+    vertical-align: middle;
 }
 
-.confirm > input {
+.confirm a {
+    text-decoration: none;
+    color: #4EA487;
+}
+
+.confirm:has(#checker:checked) > input {
+  color: black;
+  border-color: black;
+}
+
+.submit-button {
     font-family: Arima;
     font-weight: 700;
-    font-style: Bold;
     font-size: 24px;
     line-height: 120%;
     letter-spacing: 5%;
-    width: 139;
-    height: 48;
+    width: 139px;
+    height: 48px;
     gap: 10px;
     opacity: 1;
-    border-width: 1px;
+    border: 1px solid #30303080;    
     border-radius: 40px;
     padding-right: 24px;
     padding-left: 24px;
+    color: #737373;
+    background-color: #FFFFFF;
+    vertical-align: middle;    
+}
+
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+
+    background-color: #fff;
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #54370D;
+    border-radius: 4px;
+    display: inline-grid;
+    place-content: center;
+    cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #54370D; 
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
 }
