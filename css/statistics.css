@@ -1,0 +1,47 @@
+.rain_period_section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0 0 clamp(32px, calc(16px + 5vw), 88px);
+}
+
+.rain_period_section p {
+  font-size: clamp(16px, calc(13.714px + 0.714vw), 24px);
+}
+
+.rain_period_section h2 {
+  margin-top: 12px;
+  font-size: clamp(20px, calc(16.571px + 1.071vw), 32px);
+}
+
+.rain_period_section img {
+  height: clamp(180px, calc(105.714px + 23.214vw), 440px);
+  border-radius: 53px;
+  box-shadow: -2px 4px 11px rgba(0, 0, 0, 0.25);
+  margin: 0 0 clamp(32px, calc(16px + 5vw), 88px);
+}
+
+.statistics-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.statistics-wrapper img {
+  width: 100%;
+  height: clamp(312px, calc(266.857px + 14.107vw), 470px);
+  box-shadow: -2px 4px 11px rgba(0, 0, 0, 0.25);
+  border-radius: 52px;
+}
+
+@media screen and (min-width: 768px) {
+  .statistics-wrapper {
+    flex-direction: row;
+  }
+}
