@@ -12,14 +12,74 @@ form {
     padding-bottom: 126px;
 }
 
+.title-section {
+    display: flex;
+    padding: 0px max(calc(50% - 720px), 160px) 88px max(calc(50% - 720px), 160px);    
+}
+
+.title {
+    position: relative;
+    display: inline-block;
+
+}
+
+.title-image {
+  display: block;
+  height: 515px;
+}
+
+.title-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5; 
+}
+
+.eyecatcher {
+  position: absolute;
+  top: 284px;
+  left: 444px;  
+  height: 160px;
+  width: 160px;
+  z-index: 10;
+}
+
+.title-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    top: 143px;
+    left: 104px;
+    height: 277px;
+    width: 345px;
+    z-index: 10;
+}
+
+.title-text > h1 {
+    font-family: Arima;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 60px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #54370D;
+}
+
+.title-text > div {
+    font-family: Palanquin;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 110%;
+}
+
 .highlight-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: white;    
-/*    border: 1px solid black;*/
-    padding: 88px max(calc(50% - 720px), 160px) 88px max(calc(50% - 720px), 160px);
+    padding: 0px max(calc(50% - 720px), 160px) 88px max(calc(50% - 720px), 160px);
 }
 
 .header-and-text {
