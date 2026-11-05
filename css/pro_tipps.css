@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   position: relative;
-  margin: 0 clamp(16px, calc(10.857px + 1.607vw), 34px) clamp(32px, calc(16px + 5vw), 88px)
+  margin: 20px clamp(16px, calc(10.857px + 1.607vw), 34px) clamp(32px, calc(16px + 5vw), 88px)
     clamp(16px, calc(-3.714px + 6.161vw), 85px);
 }
 
@@ -40,7 +40,7 @@
 
 .pro-tipps-content ol {
   padding: 30px;
-  font-size: 1rem;
+  font-size: clamp(16px, calc(13.714px + 0.714vw), 24px);
   font-family: "Palanquin";
   line-height: 120%;
 }
@@ -59,9 +59,5 @@
   .pro-tipps-label {
     top: -55px;
     left: -50px;
-  }
-
-  .pro-tipps-content ol {
-    font-size: 1.5rem;
   }
 }

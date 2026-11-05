@@ -26,7 +26,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding: 0 0 clamp(40px, calc(37.714px + 0.714vw), 48px);
+  padding: clamp(24px, calc(8px + 5vw), 80px) 0 clamp(40px, calc(37.714px + 0.714vw), 48px);
   height: auto;
 }
 
@@ -138,29 +138,40 @@ main {
 }
 
 .main-information-list {
-  margin: 0 clamp(20px, calc(-2.857px + 7.143vw), 100px);
 }
 
 .main-information p {
   font-family: "Palanquin";
-
   line-height: 120%;
 }
 
 .main-information ol {
+  margin: 0 clamp(20px, calc(-2.857px + 7.143vw), 100px);
   padding: 30px;
   font-family: "Palanquin";
   line-height: 120%;
 }
 
+.heading-ol {
+  margin: 0 clamp(20px, calc(-2.857px + 7.143vw), 100px);
+}
+
+.heading-ul {
+  margin-bottom: 36px;
+}
+
 .main-information ul {
-  padding: 30px;
+  margin-left: 50px;
   font-family: "Palanquin";
   line-height: 120%;
 }
 
 .main-information span {
   font-weight: bold;
+}
+
+.main-information-notice {
+  padding-bottom: 30px;
 }
 
 .closing-remarks {
