@@ -12,11 +12,12 @@
 }
 
 .share-section p {
-  font-size: 1.5rem;
+  font-size: clamp(18px, calc(16.286px + 0.536vw), 24px);
   font-weight: 500;
   color: #54370d;
   text-align: center;
   margin: 0;
+  font-family: "Arima";
 }
 
 .share-wrapper {
@@ -34,6 +35,7 @@
   justify-content: center;
   gap: 10px;
 
+  font-family: "Arima";
   font-size: 1.5rem;
   text-decoration: none;
   color: #f1c953;
