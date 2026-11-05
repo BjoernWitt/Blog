@@ -14,7 +14,7 @@ footer img {
 
 footer a {
     font-family: 'Palanquin';
-    font-size: 18px;
+    font-size: 16px;
     color: #FFFFFF;
     text-decoration: none;
 }
@@ -24,6 +24,21 @@ footer > div {
     flex-direction: row;
     align-items: center;    
     gap: 16px;
+}
+
+
+footer span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+    font-family: 'Palanquin';
+    font-size: 18px;    
+    gap: 16px;
+    padding-right: 26px;
+}
+
+footer span ~ a {
+    padding-left: 72px;
 }
 
 .footer-logo {
