@@ -5,8 +5,9 @@
   justify-content: center;
 
   margin: 0 auto;
-  padding: 80px 20px 80px;
-  max-width: 450px;
+  padding: clamp(40px, calc(26.286px + 4.286vw), 88px)
+    clamp(16px, calc(-85.143px + 31.607vw), 370px) clamp(80px, calc(131.429px - 3.571vw), 120px);
+
   box-sizing: border-box;
 }
 

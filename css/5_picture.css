@@ -12,7 +12,8 @@ input[type="radio"] {
   overflow: hidden;
   perspective: 1000px;
 
-  padding: 0 clamp(16px, calc(6.286px + 3.036vw), 50px);
+  padding: clamp(0px, calc(-11.429px + 3.571vw), 40px) clamp(16px, calc(6.286px + 3.036vw), 50px)
+    clamp(40px, calc(26.286px + 4.286vw), 88px);
 }
 
 .top-5-beaches-section h2 {
@@ -137,8 +138,6 @@ body:has(#picture-five:checked) .slider-navigation label[for="picture-five"] {
 
   .top-5-beaches-section {
     gap: 60px;
-    padding-left: 30px;
-    padding-right: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;

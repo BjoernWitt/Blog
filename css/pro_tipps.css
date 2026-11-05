@@ -2,8 +2,8 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   position: relative;
-  margin: clamp(32px, calc(16px + 5vw), 88px) clamp(16px, calc(10.286px + 1.786vw), 36px) 16px
-    clamp(16px, calc(-3.143px + 5.982vw), 83px);
+  margin: 0 clamp(16px, calc(10.857px + 1.607vw), 34px) clamp(32px, calc(16px + 5vw), 88px)
+    clamp(16px, calc(-3.714px + 6.161vw), 85px);
 }
 
 .pro-tipps-label {

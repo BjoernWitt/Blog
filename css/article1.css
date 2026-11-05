@@ -26,7 +26,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding: clamp(24px, calc(8px + 5vw), 80px) 0;
+  padding: 0 0 clamp(40px, calc(37.714px + 0.714vw), 48px);
   height: auto;
 }
 
@@ -130,13 +130,11 @@ main {
 }
 
 .main-information {
-  margin-top: 40px;
   display: flex;
   flex-direction: column;
   gap: 36px;
-  padding: clamp(24px, calc(8px + 5vw), 80px) 0;
-
   font-size: clamp(16px, calc(13.714px + 0.714vw), 24px);
+  padding: 0 0 clamp(32px, calc(16px + 5vw), 88px);
 }
 
 .main-information-list {
@@ -167,7 +165,6 @@ main {
 
 .closing-remarks {
   display: flex;
-  padding: clamp(24px, calc(8px + 5vw), 80px) 0;
   font-size: clamp(16px, calc(13.714px + 0.714vw), 24px);
   font-family: "Palanquin";
   line-height: 120%;
@@ -183,16 +180,24 @@ main {
 
   .main-content-row {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: stretch;
   }
 
   .meta-info {
     gap: 32px;
   }
 
+  .blog-intro {
+    flex: 1;
+  }
+
   .author-sidebar {
     width: 30%;
+    flex-shrink: 0;
+    min-width: 250px;
+    justify-content: center;
   }
+
   .author-info {
     text-align: left;
   }

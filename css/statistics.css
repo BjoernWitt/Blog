@@ -10,11 +10,13 @@
 
 .rain_period_section p {
   font-size: clamp(16px, calc(13.714px + 0.714vw), 24px);
+  font-family: "Palanquin";
 }
 
 .rain_period_section h2 {
   margin-top: 12px;
   font-size: clamp(20px, calc(16.571px + 1.071vw), 32px);
+  font-family: "Arima";
 }
 
 .rain_period_section img {
@@ -33,11 +35,32 @@
   gap: 80px;
 }
 
+.statistics-wrapper div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, calc(13.714px + 0.714vw), 24px) 0;
+  margin: 0 clamp(16px, calc(8.857px + 2.232vw), 41px);
+}
+
 .statistics-wrapper img {
   width: 100%;
   height: clamp(312px, calc(266.857px + 14.107vw), 470px);
   box-shadow: -2px 4px 11px rgba(0, 0, 0, 0.25);
   border-radius: 52px;
+}
+
+.statistics-wrapper p {
+  font-size: clamp(16px, calc(13.714px + 0.714vw), 24px);
+  font-family: "Palanquin";
+  line-height: 120%;
+}
+
+.statistics-wrapper h2 {
+  font-size: clamp(20px, calc(16.571px + 1.071vw), 32px);
+  font-family: "Arima";
+  line-height: 120%;
 }
 
 @media screen and (min-width: 768px) {
