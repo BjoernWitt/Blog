@@ -1,23 +1,45 @@
 .highlights {
     position: relative;
-
-    background-color: black;
-
     width: 1200px;
-    height: 760px;
-
+    height: 533px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-
     overflow: hidden; 
     border-top-right-radius: 100px;    
     margin-top: 88px;
 }
 
-.highlight-slider {
-    z-index: 2;
-    padding-bottom: 44px;
+input[type="radio"] {
+  display: none;
+}
+
+.slider-navigation {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  z-index: 10;
+  padding-bottom: 44px;
+}
+
+.buttons {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 10;
+}
+
+body:has(#one:checked) .highlights label[for="one"],
+body:has(#two:checked) .highlights label[for="two"],
+body:has(#three:checked) .highlights label[for="three"],
+body:has(#four:checked) .highlights label[for="four"] {
+    background-color: #F1C953;
+    width: 40px;
+    border-radius: 20px;  
 }
 
 .highlights_wrapper {
@@ -37,38 +59,41 @@
     height: 100%;
 }
 
-.highlight_one {
-    background-color: aquamarine;
-}
-
-.highlight_two {
-    background-color: brown;
-}
-
-.highlight_three {
-    background-color: goldenrod;
-}
-
-.highlight_four {
-    background-color: yellow;
-}
-
-.highlights input[value="one"]:checked~.highlights_wrapper {
+body:has(#one:checked) .highlights_wrapper {
     transform: translateX(37.5%);
 }
 
-.highlights input[value="two"]:checked~.highlights_wrapper {
+body:has(#two:checked) .highlights_wrapper {
     transform: translateX(12.5%);
 }
 
-.highlights input[value="three"]:checked~.highlights_wrapper {
+body:has(#three:checked) .highlights_wrapper {
     transform: translateX(-12.5%);
 }
 
-.highlights input[value="four"]:checked~.highlights_wrapper {
+body:has(#four:checked) .highlights_wrapper {
     transform: translateX(-37.5%);
 }
 
+
+
+/*
+input[value="one"]:checked~.highlights_wrapper {
+    transform: translateX(37.5%);
+}
+
+input[value="two"]:checked~.highlights_wrapper {
+    transform: translateX(12.5%);
+}
+
+input[value="three"]:checked~.highlights_wrapper {
+    transform: translateX(-12.5%);
+}
+
+input[value="four"]:checked~.highlights_wrapper {
+    transform: translateX(-37.5%);
+}
+*/
 .picture {
   width: 1200px;
   height: 100%;

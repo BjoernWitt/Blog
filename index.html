@@ -13,6 +13,10 @@
         <link rel='stylesheet' href='./css/footer.css'>
     </head>
     <body>
+        <input type="radio" id="one" name="slider" checked>
+        <input type="radio" id="two" name="slider" value="two">
+        <input type="radio" id="three" name="slider" value="three">
+        <input type="radio" id="four" name="slider" value="four">
         <header>
             <div class="nav-bar">
                 <img src="./assets/img/logo-travel-blog.svg" alt="Logo der Seite" />
@@ -42,10 +46,12 @@
                     of Scandinavia, each destination offers a distinct way to explore the world.</p>
             </div>
             <div class="highlights">
-                <input class="highlight-slider" name="slider" type="radio" value="one" checked>
-                <input class="highlight-slider" name="slider" type="radio" value="two">
-                <input class="highlight-slider" name="slider" type="radio" value="three">
-                <input class="highlight-slider" name="slider" type="radio" value="four">
+                <div class="slider-navigation">
+                    <label for="one" class="buttons"></label>
+                    <label for="two" class="buttons"></label>
+                    <label for="three" class="buttons"></label>
+                    <label for="four" class="buttons"></label>
+                </div>                
                 <div class="highlights_wrapper">
                     <div class="highlight_element highlight_one">
                         <a href="./article1.html">

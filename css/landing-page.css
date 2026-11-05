@@ -14,13 +14,15 @@ form {
 
 .title-section {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     padding: 0px max(calc(50% - 720px), 160px) 88px max(calc(50% - 720px), 160px);    
+/*    border: 1px solid red; */
 }
 
 .title {
     position: relative;
     display: inline-block;
-
 }
 
 .title-image {
@@ -218,6 +220,8 @@ details[open] > summary::after {
     border: none;
     border-bottom: 1px solid #54370D;
     outline: none;
+    padding-bottom: 17px;
+    padding-top: 17px;    
 }
 
 .confirm {
