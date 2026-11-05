@@ -72,6 +72,7 @@ main {
   align-items: center;
   gap: 8px;
   font-size: 1rem;
+  font-family: "Palanquin";
 }
 .meta-info span img {
   width: 20px;
