@@ -86,10 +86,15 @@ body:has(#four:checked) .highlights_wrapper {
 }
 
 .image-two {
-    left: 1238px;
+    top: 310px !important;
+    height: 150px !important;
+    left: 1300px;
 }
 
 .image-three {
+    top: 215px !important;
+    height: 200px !important;    
+    width: 750px !important;
     left: 2438px;
 }
 
