@@ -6,13 +6,38 @@ footer {
     padding: 0px max(calc(50% - 720px), 120px) 0px max(calc(50% - 720px), 120px);   
     background-color: #4EA487;
     height: 152px;
+    width: 100%;
 }
 
-footer img {
+footer div a img {
     height: 32px;
 }
 
-footer a {
+.copyright {
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+    font-family: 'Palanquin';
+    font-size: 18px;    
+    gap: 16px;
+    padding-right: 26px;
+    width: 180px;
+}
+
+.copyright > a {
+    font-family: 'Palanquin';
+    font-size: 18px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.rights-setting {
+    display: flex;
+    flex-direction: row;
+    gap: 72px;
+}
+
+.rights-setting > a {
     font-family: 'Palanquin';
     font-size: 16px;
     color: #FFFFFF;
@@ -26,21 +51,89 @@ footer > div {
     gap: 16px;
 }
 
-
-footer span {
-    display: flex;
-    flex-direction: row;
-    align-items: center;    
-    font-family: 'Palanquin';
-    font-size: 18px;    
-    gap: 16px;
-    padding-right: 26px;
-}
-
-footer span ~ a {
-    padding-left: 72px;
-}
+ footer > div:first-child {
+    gap: 72px;
+ }
 
 .footer-logo {
-    height: 44px;
+    height: 20px;
+}
+
+.bottom-nav-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+    gap: 48px;
+    padding: 24px 36px 24px 36px;
+    background-color: #F1C953;
+
+    position: fixed;
+    bottom: 0px;
+    z-index: 10;
+
+    visibility: hidden;
+}
+
+.bottom-nav-bar img {
+    height: 40px;
+}
+
+@media screen and (max-width: 1000px) {
+    footer {   
+        padding: 0px 50px 0px 50px;          
+    }
+
+    footer > div:first-child {
+        gap: 35px;
+    }
+
+    .rights-setting {
+        gap: 35px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .bottom-nav-bar {
+        visibility: visible;
+    }
+
+    footer {
+        height: 210px;
+        padding: 0px 24px 73px 24px;  
+    }
+
+    footer span {
+        gap: 4px;
+        width: 147px;        
+    }
+
+    footer > div:first-child {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .rights-setting {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    footer div span a {
+        padding-left: 0px;
+        font-size: 16px; 
+        font-weight: 400;
+        line-height: 120%;
+        letter-spacing: 0%;
+        width: 123px;
+    }
+
+    footer div a img {
+        height: 24px;
+    }
+
 }
