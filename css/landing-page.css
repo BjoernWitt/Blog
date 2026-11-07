@@ -7,7 +7,7 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    background-color: white;    
+    background-color: white;
     padding-top: 56px;
     padding-bottom: 126px;
 }
@@ -16,8 +16,8 @@ form {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 0px max(calc(50% - 720px), 160px) 88px max(calc(50% - 720px), 160px);    
-/*    border: 1px solid red; */
+    padding: 0px max(calc(50% - 720px), 160px) 88px max(calc(50% - 720px), 160px);
+    overflow: hidden;
 }
 
 .title {
@@ -26,15 +26,16 @@ form {
 }
 
 .title-image {
-  display: block;
-  height: 515px;
+    display: relative;
+    right: 0px;
+    height: 515px;
 }
 
 .title-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 5; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5; 
 }
 
 .eyecatcher {
@@ -82,6 +83,7 @@ form {
     align-items: center;
     background-color: white;    
     padding: 0px max(calc(50% - 720px), 160px) 88px max(calc(50% - 720px), 160px);
+    overflow: hidden;      
 }
 
 .header-and-text {
@@ -95,7 +97,7 @@ form {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-bottom: 24px;    
+    padding-bottom: 24px;
 }
 
 .header-and-text h2 {
@@ -127,7 +129,7 @@ form {
 
 details {
     background-color: #F1C953;
-    margin: 32px max(calc(50% - 720px), 120px) 0px max(calc(50% - 720px), 120px);    
+    margin: 32px max(calc(50% - 720px), 120px) 0px max(calc(50% - 720px), 120px);
     height: 61;
     gap: 8px;
     border-radius: 12px;
@@ -156,7 +158,7 @@ details > p {
 summary {
     display: flex;
     justify-content: space-between; /* Schiebt Text nach links und Icon nach rechts */
-    align-items: center;     
+    align-items: center;
     color: #54370D;
     font-size: 24px;
     font-family: 'Palanquin';
@@ -184,9 +186,8 @@ details[open] > summary::after {
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    background-color: white;    
-/*    border: 1px solid black;*/
-    padding: 0px max(calc(50% - 720px), 160px) 0px max(calc(50% - 720px), 160px);    
+    background-color: white;
+    padding: 0px max(calc(50% - 720px), 160px) 0px max(calc(50% - 720px), 160px);
 }
 
 .group {
@@ -194,7 +195,6 @@ details[open] > summary::after {
     flex-direction: row;
     justify-content: space-between;
     gap: 46px;
-/*    border: 1px solid red;      */
 }
 
 .group-input {
@@ -203,25 +203,24 @@ details[open] > summary::after {
     flex-grow: 1;    
     gap: 8px;
     margin-bottom: 16px;
-/*    border: 1px solid black;  */
 }
 
 .group-input > label {
-    font-family: 'Palanquin';    
+    font-family: 'Palanquin';
     color: #54370D;
     font-size: 24px;
     font-weight: 500;  
 }
 
 .group-input > input[type="text"] {
-    font-family: 'Palanquin';    
+    font-family: 'Palanquin';
     color: #54370D;
     font-size: 16px;
     border: none;
     border-bottom: 1px solid #54370D;
     outline: none;
     padding-bottom: 17px;
-    padding-top: 17px;    
+    padding-top: 17px;
 }
 
 .confirm {
@@ -241,6 +240,7 @@ details[open] > summary::after {
     letter-spacing: 0%;
     padding-bottom: 57px;
     vertical-align: middle;
+    color: #54370D;
 }
 
 .confirm a {
@@ -263,13 +263,13 @@ details[open] > summary::after {
     height: 48px;
     gap: 10px;
     opacity: 1;
-    border: 1px solid #30303080;    
+    border: 1px solid #30303080;
     border-radius: 40px;
     padding-right: 24px;
     padding-left: 24px;
     color: #737373;
     background-color: #FFFFFF;
-    vertical-align: middle;    
+    vertical-align: middle;
 }
 
 
@@ -300,4 +300,83 @@ input[type="checkbox"]::before {
 
 input[type="checkbox"]:checked::before {
   transform: scale(1);
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        padding-bottom: 80px;
+    }
+
+    .title-text {
+        display: none;
+    }
+
+    .header-and-text {
+        padding-bottom: 32px;
+    }
+
+    .header-and-text > div {
+        padding-bottom: 0px;
+    }
+
+    .header-and-text img {
+        height: 40px;
+    }
+
+    .header-and-text h2 {
+        font-family: Arima;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 120%;
+        letter-spacing: 0%;
+        text-align: center;
+        padding-bottom: 0px;
+    }
+
+    .header-and-text p {
+        display: none;
+    }
+
+    form {
+        padding-top: 0px;
+        padding-bottom: 80px;
+    }
+
+    .contact-section {
+        padding: 0px 18px 0px 18px;
+    }
+
+    .group {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .group-input {
+        padding-top: 32px;
+    }
+
+    .confirm div {
+        font-family: Palanquin;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 120%;
+        letter-spacing: 0%;
+        padding-bottom: 40px;
+    }
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .title-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        padding: 0px 0px 88px 0px;
+    }
+
+    .contact-section {
+        padding: 0px 18px 0px 18px;
+    }
 }
