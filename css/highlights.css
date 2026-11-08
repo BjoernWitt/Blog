@@ -55,6 +55,7 @@ body:has(#four:checked) .highlights label[for="four"] {
 }
 
 .highlight_element {
+    position: relative;    
     width: calc(100% / 4);
     height: 100%;
 }
@@ -82,30 +83,30 @@ body:has(#four:checked) .highlights_wrapper {
 }
 
 .image-one {
-    left: 38px;
+/*    left: 38px;*/
+    left: clamp(14px, 24px, 38px);
 }
 
 .image-two {
     top: 310px !important;
     height: 150px !important;
-    left: 1300px;
+    left: 70px;
 }
 
 .image-three {
     top: 215px !important;
     height: 200px !important;    
-    width: 750px !important;
-    left: 2438px;
+    left: 38px;
 }
 
 .highlight-title {
     position: absolute;
+    top: 54px;    
     display: flex;
     flex-direction: column;
     gap: 8px;
-    top: 54px;
     z-index: 20;
-    width: 881px;
+    width: min(calc(100px + 50*1vw), 881px);    
     height: 229px;
     padding-top: 16px;
     padding-left: 24px;
@@ -131,4 +132,99 @@ body:has(#four:checked) .highlights_wrapper {
     font-size: 28px;
     line-height: 110%;
     letter-spacing: 0%;
+}
+
+@media screen and (max-width: 500px) {    
+
+    .highlight-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .highlights {
+        width: 100%;
+        margin-top: 33px;
+    }
+
+    .highlight-title {
+        top: 93px;
+        width: 307px;
+        height: 190px;
+        padding-top: 8px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .image-one {
+        left: 14px;
+    }    
+
+    .image-two {
+        top: 55px !important;
+        left: 10px;
+    } 
+
+    .image-three {
+        top: 50px !important;
+        left: 14px;
+    } 
+
+    .highlight-title > h1 {
+        font-size: 28px;
+        display: -webkit-box;          
+        -webkit-line-clamp: 2; /* Anzahl der Zeilen (hier 3) */
+        -webkit-box-orient: vertical;  
+        overflow: hidden;          
+    }
+
+    .highlight-title > div {
+        width: 255px;
+        font-size: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Anzahl der Zeilen (hier 3) */
+        -webkit-box-orient: vertical;  
+        overflow: hidden;         
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 1240px) {
+
+    .highlights {
+        width: 100%;
+    }
+
+    .highlight-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .highlight-title {
+        top: 54px;
+        width: min(calc(70px + 70*1vw), 831px);  
+        height: 190px;
+        padding-top: 8px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .highlight-title > h1 {
+        font-size: 38px;
+        display: -webkit-box;        
+        -webkit-line-clamp: 2; /* Anzahl der Zeilen (hier 3) */
+        -webkit-box-orient: vertical;  
+        overflow: hidden;          
+    }
+
+    .highlight-title > div {
+        width: min(calc(70*1vw), 800px);  
+        font-size: 24px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Anzahl der Zeilen (hier 3) */
+        -webkit-box-orient: vertical;  
+        overflow: hidden;         
+    }
+
+    .image-two {
+        left: 10px;
+    }     
 }
