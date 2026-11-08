@@ -16,64 +16,8 @@ form {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 0px max(calc(50% - 720px), 160px) 88px max(calc(50% - 720px), 160px);
+    padding: 0px calc(50% - 720px) 88px calc(50% - 720px);
     overflow: hidden;
-}
-
-.title {
-    position: relative;
-    display: inline-block;
-}
-
-.title-image {
-    display: relative;
-    right: 0px;
-    height: 515px;
-}
-
-.title-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 5; 
-}
-
-.eyecatcher {
-  position: absolute;
-  top: 284px;
-  left: 444px;  
-  height: 160px;
-  width: 160px;
-  z-index: 10;
-}
-
-.title-text {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    top: 143px;
-    left: 104px;
-    height: 277px;
-    width: 345px;
-    z-index: 10;
-}
-
-.title-text > h1 {
-    font-family: Arima;
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 60px;
-    line-height: 120%;
-    letter-spacing: 0%;
-    color: #54370D;
-}
-
-.title-text > div {
-    font-family: Palanquin;
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 110%;
 }
 
 .highlight-section {
@@ -310,10 +254,6 @@ input[type="checkbox"]:checked::before {
         padding-bottom: 80px;
     }
 
-    .title-text {
-        display: none;
-    }
-
     .header-and-text {
         padding-bottom: 32px;
     }
@@ -389,13 +329,6 @@ input[type="checkbox"]:checked::before {
 
 
 @media screen and (min-width: 790px) and (max-width: 1200px) {
-    .title-section {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        width: 100%;
-        padding: 0px 0px 88px 0px;
-    }
 
     .contact-section {
         padding: 0px 18px 0px 18px;
