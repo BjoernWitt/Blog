@@ -33,4 +33,8 @@ header {
   .nav-bar > a {
     display: none;
   }
+  header {
+    justify-content: center;
+    align-items: center;
+  }
 }
