@@ -1,139 +1,107 @@
 footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px max(calc(50% - 720px), 120px) 0px max(calc(50% - 720px), 120px);   
-    background-color: #4EA487;
-    height: 152px;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #4ea487;
+  width: 100%;
 }
 
-footer div a img {
-    height: 32px;
+.footer-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding: clamp(30px, calc(21.429px + 2.679vw), 60px) clamp(16px, calc(-13.714px + 9.286vw), 120px);
+
+  height: clamp(134px, calc(128.857px + 1.607vw), 152px);
+  width: 100%;
+  max-width: 1440px;
+  font-family: "Palanquin";
+  gap: 26px;
 }
 
-.copyright {
-    display: flex;
-    flex-direction: row;
-    align-items: center;    
-    font-family: 'Palanquin';
-    font-size: 18px;    
-    gap: 16px;
-    padding-right: 26px;
-    width: 180px;
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 150px;
+  width: 100%;
+  gap: 8px;
 }
 
-.copyright > a {
-    font-family: 'Palanquin';
-    font-size: 18px;
-    color: #FFFFFF;
-    text-decoration: none;
+.footer-left > a:nth-child(2) {
+  order: 1;
 }
 
-.rights-setting {
-    display: flex;
-    flex-direction: row;
-    gap: 72px;
+.footer-left > a:nth-child(3) {
+  order: 2;
 }
 
-.rights-setting > a {
-    font-family: 'Palanquin';
-    font-size: 16px;
-    color: #FFFFFF;
-    text-decoration: none;
+.footer-left > a:nth-child(1) {
+  order: 3;
 }
 
-footer > div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;    
-    gap: 16px;
+.footer-left img {
+  height: 20px;
 }
 
- footer > div:first-child {
-    gap: 72px;
- }
+.footer-left > a:first-child {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  font-size: clamp(16px, calc(15.429px + 0.179vw), 18px);
+}
 
-.footer-logo {
-    height: 20px;
+.footer-left a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.footer-media {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.footer-media a img {
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: clamp(24px, calc(21.714px + 0.714vw), 32px);
+  width: 100%;
 }
 
 .bottom-nav-bar {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;    
-    gap: 48px;
-    padding: 24px 36px 24px 36px;
-    background-color: #F1C953;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 24px 36px;
+  background-color: #f1c953;
 
-    position: fixed;
-    bottom: 0px;
-    z-index: 10;
-
-    visibility: hidden;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
 }
 
 .bottom-nav-bar img {
-    height: 40px;
+  height: 40px;
 }
 
-@media screen and (max-width: 1000px) {
-    footer {   
-        padding: 0px 50px 0px 50px;          
-    }
+@media screen and (min-width: 768px) {
+  .footer-left {
+    flex-direction: row;
+    gap: 72px;
+  }
 
-    footer > div:first-child {
-        gap: 35px;
-    }
+  .bottom-nav-bar {
+    display: none;
+  }
 
-    .rights-setting {
-        gap: 35px;
-    }
-}
-
-
-@media screen and (max-width: 768px) {
-
-    .bottom-nav-bar {
-        visibility: visible;
-    }
-
-    footer {
-        height: 210px;
-        padding: 0px 24px 73px 24px;  
-    }
-
-    footer span {
-        gap: 4px;
-        width: 147px;        
-    }
-
-    footer > div:first-child {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: flex-start;
-        gap: 8px;
-    }
-
-    .rights-setting {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    footer div span a {
-        padding-left: 0px;
-        font-size: 16px; 
-        font-weight: 400;
-        line-height: 120%;
-        letter-spacing: 0%;
-        width: 123px;
-    }
-
-    footer div a img {
-        height: 24px;
-    }
-
+  .footer-top {
+    align-items: center;
+  }
 }

@@ -66,6 +66,7 @@ main {
   flex-wrap: wrap;
   gap: 24px;
   margin: clamp(24px, calc(19.429px + 1.429vw), 40px) 0 0;
+  color: #54370d;
 }
 .meta-info span {
   display: flex;
@@ -90,6 +91,8 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 10px;
+  color: #54370d;
 }
 
 .author-sidebar > h2 {
@@ -111,7 +114,7 @@ main {
   font-family: "Palanquin";
   line-height: 120%;
   font-size: 1rem;
-  margin: 12px clamp(8px, calc(5.714px + 0.714vw), 16px);
+  margin-top: 5px;
   text-align: center;
 }
 
@@ -139,12 +142,10 @@ main {
   padding: 0 0 clamp(32px, calc(16px + 5vw), 88px);
 }
 
-.main-information-list {
-}
-
 .main-information p {
   font-family: "Palanquin";
   line-height: 120%;
+  color: #3d3d3d;
 }
 
 .main-information ol {
@@ -152,6 +153,7 @@ main {
   padding: 30px;
   font-family: "Palanquin";
   line-height: 120%;
+  color: #3d3d3d;
 }
 
 .heading-ol {
@@ -166,6 +168,7 @@ main {
   margin-left: 50px;
   font-family: "Palanquin";
   line-height: 120%;
+  color: #3d3d3d;
 }
 
 .main-information span {
@@ -181,10 +184,10 @@ main {
   font-size: clamp(16px, calc(13.714px + 0.714vw), 24px);
   font-family: "Palanquin";
   line-height: 120%;
+  color: #3d3d3d;
 }
 
 @media screen and (min-width: 768px) {
-
   .main-content-row {
     flex-direction: row;
     align-items: stretch;
@@ -199,9 +202,9 @@ main {
   }
 
   .author-sidebar {
-    width: 30%;
+    max-width: 22.5%;
     flex-shrink: 0;
-    min-width: 250px;
+    min-width: 200px;
     justify-content: center;
   }
 

@@ -11,6 +11,7 @@
   font-size: clamp(16px, calc(13.714px + 0.714vw), 24px);
   font-family: "Palanquin";
   line-height: 120%;
+  color: #3d3d3d;
 }
 
 .video-wrapper {
