@@ -48,9 +48,9 @@
 
 .share-wrapper > img {
   position: absolute;
-  width: 90px;
+  width: clamp(50px, calc(38.571px + 3.571vw), 90px);
   height: auto;
-  left: 1%;
+  left: 0%;
   bottom: 5px;
 }
 
