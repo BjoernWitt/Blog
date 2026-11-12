@@ -12,14 +12,6 @@ form {
     padding-bottom: 126px;
 }
 
-.title-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 0px calc(50% - 720px) 88px calc(50% - 720px);
-    overflow: hidden;
-}
-
 .highlight-section {
     display: flex;
     flex-direction: column;
