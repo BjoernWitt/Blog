@@ -5,6 +5,10 @@
   scroll-behavior: smooth;
 }
 
+body {
+  padding-inline: max(0px, calc((100% - 1440px) / 2));
+}
+
 .landing-section {
   width: 100%;
   max-width: 1440px;
@@ -12,7 +16,7 @@
 
   background-image: url(./assets/cappadocia1.png);
 
-  background-position: 70% center;
+  background-position: clamp(65%, calc(57.857% + 2.2321vw), 90%) center;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -66,7 +70,7 @@
 }
 
 .text-box {
-  width: 345px;
+  width: clamp(260px, calc(235.714px + 7.589vw), 345px);
   animation: text-box 3s ease-in-out forwards;
 
   display: flex;
@@ -75,32 +79,34 @@
 }
 
 .text-box h2 {
-  font-size: 60px;
+  font-size: clamp(40px, calc(34.286px + 1.786vw), 60px);
   animation: text-box-h2 3s ease-in-out forwards;
   opacity: 0;
 }
 
 .text-box p {
-  font-size: 28px;
+  font-size: clamp(20px, calc(17.714px + 0.714vw), 28px);
   animation: text-box-p 3s ease-in-out forwards;
   opacity: 0;
 }
 
 @keyframes text-box {
   0% {
-    transform: translateY(300px);
+    transform: translateY(300px) translateX(calc(-1 * clamp(0px, calc(25.714px - 1.786vw), 20px)));
   }
   25% {
-    transform: translateY(0px);
+    transform: translateY(clamp(-30px, calc(-38.571px + 2.6786vw), 0px))
+      translateX(calc(-1 * clamp(0px, calc(25.714px - 1.786vw), 20px)));
   }
   35% {
-    transform: translateY(0px);
+    transform: translateY(clamp(-30px, calc(-38.571px + 2.6786vw), 0px))
+      translateX(calc(-1 * clamp(0px, calc(25.714px - 1.786vw), 20px)));
   }
   60% {
-    transform: translateX(-450px);
+    transform: translateX(calc(-1 * (clamp(20px, calc(-102.857px + 38.393vw), 450px))));
   }
   100% {
-    transform: translateX(-450px);
+    transform: translateX(calc(-1 * (clamp(20px, calc(-102.857px + 38.393vw), 450px))));
   }
 }
 
@@ -154,14 +160,14 @@
 
   60% {
     opacity: 1;
-    transform: translateX(-460px);
+    transform: translateX(calc(-1 * clamp(200px, calc(125.714px + 23.214vw), 460px)));
   }
   75% {
     opacity: 0;
   }
   100% {
     opacity: 0;
-    transform: translateX(-460px);
+    transform: translateX(calc(-1 * clamp(200px, calc(125.714px + 23.214vw), 460px)));
   }
 }
 @keyframes yellow-big-curved {
@@ -171,7 +177,7 @@
   }
 
   75% {
-    transform: translateX(-450px) scale(1.1);
+    transform: translateX((-450px)) scale(1.1);
     opacity: 1;
   }
   100% {
@@ -182,15 +188,20 @@
 
 @keyframes caroussel {
   75% {
-    transform: translateX(-250px) translateY(150px);
+    transform: translateX(clamp(-300px, calc(8.571px - 21.429vw), -60px)) translateY(250px);
     opacity: 0;
   }
   80% {
-    transform: translateX(-250px) translateY(150px);
-    opacity: 1;
+    transform: translateX(clamp(-300px, calc(8.571px - 21.429vw), -60px)) translateY(250px);
+    opacity: 0;
+  }
+  90% {
+    transform: translateX(clamp(-220px, calc(11.43px - 16.0714vw), -40px))
+      translateY(clamp(-30px, calc(-90px + 18.75vw), 180px));
   }
   100% {
-    transform: translateX(-250px) translateY(150px);
+    transform: translateX(clamp(-220px, calc(11.43px - 16.0714vw), -40px))
+      translateY(clamp(-30px, calc(-90px + 18.75vw), 180px));
     opacity: 1;
   }
 }
@@ -205,8 +216,37 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
-  body {
-    padding: 0px max(120px, calc(50% - 720px));
+@media screen and (max-width: 768px) {
+  @keyframes text-box {
+    0% {
+      transform: translateY(300px) translateX(calc(-1 * clamp(0px, calc(25.714px - 1.786vw), 20px)));
+    }
+    25% {
+      transform: translateY(clamp(-30px, calc(-38.571px + 2.6786vw), 0px))
+        translateX(calc(-1 * clamp(0px, calc(25.714px - 1.786vw), 20px)));
+    }
+    35% {
+      transform: translateY(clamp(-30px, calc(-38.571px + 2.6786vw), 0px))
+        translateX(calc(-1 * clamp(0px, calc(25.714px - 1.786vw), 20px)));
+    }
+    50% {
+      transform: translateY(clamp(-30px, calc(-38.571px + 2.6786vw), 0px))
+        translateX(calc(-1 * clamp(0px, calc(25.714px - 1.786vw), 20px)));
+    }
+    60% {
+      opacity: 1;
+      transform: translateX(calc(-1 * (clamp(20px, calc(-102.857px + 38.393vw), 450px))))
+        translateY(clamp(-30px, calc(-38.571px + 2.6786vw), 0px));
+    }
+    70% {
+      opacity: 0;
+      transform: translateX(calc(-1 * (clamp(20px, calc(-102.857px + 38.393vw), 450px))))
+        translateY(clamp(-30px, calc(-38.571px + 2.6786vw), 0px));
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(calc(-1 * (clamp(20px, calc(-102.857px + 38.393vw), 450px))))
+        translateY(clamp(-30px, calc(-38.571px + 2.6786vw), 0px));
+    }
   }
 }
