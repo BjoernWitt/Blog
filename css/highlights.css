@@ -96,7 +96,12 @@ body:has(#four:checked) .highlights_wrapper {
 .image-three {
     top: 215px !important;
     height: 200px !important;    
-    left: 38px;
+    left: clamp(14px, 24px, 38px);
+}
+
+.image-four {
+    height: 200px !important;    
+    left: clamp(14px, 24px, 38px);
 }
 
 .highlight-title {
@@ -111,7 +116,8 @@ body:has(#four:checked) .highlights_wrapper {
     padding-top: 16px;
     padding-left: 24px;
     padding-right: 24px;
-    background-color: #ffffff1a;
+/*    background-color: #ffffff1a;*/
+    background-color: rgba(255, 255, 255, 0.3);    
     border-left: 1px solid #ffffff80;
     border-right: 1px solid #ffffff80;
 }

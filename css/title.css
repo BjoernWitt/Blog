@@ -56,6 +56,14 @@
   left: calc(104px + 450px);
   height: 277px;
   width: 345px;
+
+  font-family: Palanquin;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 28px;
+  line-height: 110.00000000000001%;
+  letter-spacing: 0%;
+
   z-index: 25;
 }
 

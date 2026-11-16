@@ -5,14 +5,11 @@
   scroll-behavior: smooth;
 }
 
-body {
-  padding-inline: max(0px, calc((100% - 1440px) / 2));
-}
 
 .landing-section {
   width: 100%;
   max-width: 1440px;
-  height: 600px;
+  height: 515px;
 
   background-image: url(./assets/cappadocia1.png);
 
@@ -242,7 +239,7 @@ body {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 784px) {
   @keyframes text-box {
     0% {
       opacity: 0;

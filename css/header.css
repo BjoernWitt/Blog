@@ -7,6 +7,7 @@ header {
   height: 128px;
   background-color: #4ea487;
   padding: 0px max(calc(50% - 720px), 160px) 0px max(calc(50% - 720px), 0px);
+  z-index: 100;
 }
 
 .nav-bar {
@@ -16,6 +17,7 @@ header {
   align-items: center;
   gap: 72px;
   padding-left: 146px;
+  z-index: 101;  
 }
 
 .nav-bar > img {

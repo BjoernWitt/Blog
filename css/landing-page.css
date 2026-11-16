@@ -18,7 +18,7 @@ form {
     justify-content: center;
     align-items: center;
     background-color: white;    
-    padding: 0px max(calc(50% - 720px), 160px) 88px max(calc(50% - 720px), 160px);
+    padding: 88px max(calc(50% - 720px), 160px) 88px max(calc(50% - 720px), 160px);
     overflow: hidden;      
 }
 
