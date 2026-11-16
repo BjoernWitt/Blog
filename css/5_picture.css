@@ -12,7 +12,8 @@ input[type="radio"] {
   overflow: hidden;
   perspective: 1000px;
 
-  padding: clamp(0px, calc(-11.429px + 3.571vw), 40px) clamp(16px, calc(6.286px + 3.036vw), 50px)
+  padding: clamp(0px, calc(-11.429px + 3.571vw), 40px)
+    clamp(16px, calc(6.286px + 3.036vw), 50px)
     clamp(40px, calc(26.286px + 4.286vw), 88px);
 }
 
@@ -42,8 +43,9 @@ input[type="radio"] {
   object-fit: cover;
   box-shadow: -9px 5px 20px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
-  transform: rotateY(var(--element-angle)) translateZ(250px) rotateY(var(--picture-tilt, 0deg))
-    translateX(var(--picture-offset, 0px)) scale(var(--picture-scale, 1));
+  transform: rotateY(var(--element-angle)) translateZ(250px)
+    rotateY(var(--picture-tilt, 0deg)) translateX(var(--picture-offset, 0px))
+    scale(var(--picture-scale, 1));
   transition: transform 0.7s ease-in-out;
 
   backface-visibility: hidden;
@@ -172,10 +174,19 @@ body:has(#picture-five:checked) .slider-navigation label[for="picture-five"] {
 
   .beach-picture:hover {
     z-index: 2;
-    transform: perspective(250px) rotateY(0deg) translateX(0px) scaleX(1.8) scaleY(1.2) !important;
+    transform: perspective(250px) rotateY(0deg) translateX(0px) scaleX(1.8)
+      scaleY(1.2) !important;
   }
 
   .beach-picture:hover ~ .beach-picture {
-    transform: perspective(250px) rotateY(-20deg) translateX(20px) !important;
+    transform: perspective(250px) rotateY(-20deg) translateX(30px) !important;
   }
+}
+
+.beach-picture:has(~ .beach-picture:hover) {
+  transform: perspective(250px) rotateY(5deg) translateX(-11.5vw) !important;
+}
+
+.beach-picture:hover ~ .beach-picture {
+  transform: perspective(250px) rotateY(-5deg) translateX(11.5vw) !important;
 }
