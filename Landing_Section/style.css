@@ -15,10 +15,6 @@ body {
   max-width: 1440px;
   height: 515px;
 
-  background-position: clamp(65%, calc(57.857% + 2.2321vw), 90%) center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
   overflow: hidden;
 
   display: flex;
@@ -29,14 +25,15 @@ body {
 
 .bg-image {
   z-index: 1;
-  height: clamp(515px, calc(538.143px - 1.607vw), 533px);
+  height: 515px;
 
   animation: bg-image 6s ease-in-out forwards;
 }
 
 .first-yellow {
   z-index: 2;
-  height: clamp(515px, calc(538.143px - 1.607vw), 533px);
+  height: 515px;
+
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -48,7 +45,7 @@ body {
 
 .first-yellow img {
   display: block;
-  height: 550px;
+  height: 100%;
 }
 
 .first-yellow img:last-child {
@@ -114,131 +111,136 @@ body {
   font-family: "Arima";
   line-height: 120%;
 }
-
-@keyframes text-box {
-  from {
-    opacity: 1;
-    transform: translateX(clamp(18px, calc(-11.143px + 9.107vw), 120px))
-      translateY(-41px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(clamp(18px, calc(-11.143px + 9.107vw), 120px))
-      translateY(-41px);
-  }
-}
-
-@keyframes text-box-h2 {
-  0%,
-  10% {
-    opacity: 0;
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  @keyframes text-box {
+    from {
+      opacity: 1;
+      transform: translateX(clamp(18px, calc(-11.143px + 9.107vw), 120px))
+        translateY(-41px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(clamp(18px, calc(-11.143px + 9.107vw), 120px))
+        translateY(-41px);
+    }
   }
 
-  20% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  83% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+  @keyframes text-box-h2 {
+    0%,
+    10% {
+      opacity: 0;
+    }
 
-@keyframes text-box-p {
-  0%,
-  10% {
-    opacity: 0;
-  }
-
-  20% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  83% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes first-yellow {
-  from {
-    opacity: 0;
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    83% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 
-  to {
-    opacity: 0;
-  }
-}
+  @keyframes text-box-p {
+    0%,
+    10% {
+      opacity: 0;
+    }
 
-@keyframes bg-image {
-  0%,
-  40% {
-    transform: translateX(550px);
-  }
-  60% {
-    transform: translateX(-160px);
-  }
-
-  100% {
-    transform: translateX(-160px);
-  }
-}
-
-@keyframes yellow-big-curved {
-  0%,
-  40% {
-    transform: scale(1.4);
-  }
-  60%,
-  80% {
-    transform: scalex(1.1) scaley(0.93)
-      translateX(clamp(-300px, calc(-514.765px + 67.114vw), 0px))
-      translateY(-25px);
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    83% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 
-  90%,
-  100% {
-    transform: scaley(0.6)
-      translateX(clamp(-200px, calc(-343.177px + 44.743vw), 0px)) scaleX(0.7)
-      translateY(-50px);
-  }
-}
+  @keyframes first-yellow {
+    from {
+      opacity: 0;
+    }
 
-@keyframes caroussel {
-  0%,
-  80% {
-    transform: translateX(-15px) translateY(-50px);
-    opacity: 0;
+    to {
+      opacity: 0;
+    }
   }
-  82%,
-  100% {
-    transform: translateX(-15px) translateY(-50px);
-    opacity: 1;
-  }
-}
 
-@keyframes letters {
-  from {
-    transform: rotate(0deg);
+  @keyframes bg-image {
+    0%,
+    40% {
+      transform: translateX(550px);
+    }
+    60% {
+      transform: translateX(-160px);
+    }
+
+    100% {
+      transform: translateX(-160px);
+    }
   }
-  to {
-    transform: rotate(360deg);
+
+  @keyframes yellow-big-curved {
+    0%,
+    40% {
+      transform: scale(1.4);
+    }
+    60%,
+    80% {
+      transform: scalex(1.1) scaley(0.93)
+        translateX(clamp(-300px, calc(-514.765px + 67.114vw), 0px))
+        translateY(-25px);
+    }
+
+    90%,
+    100% {
+      transform: scaley(0.6)
+        translateX(clamp(-200px, calc(-343.177px + 44.743vw), 0px)) scaleX(0.7)
+        translateY(-50px);
+    }
+  }
+
+  @keyframes caroussel {
+    0%,
+    80% {
+      transform: translateX(-15px) translateY(-50px);
+      opacity: 0;
+    }
+    82%,
+    100% {
+      transform: translateX(-15px) translateY(-50px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes letters {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 }
 
 @media screen and (min-width: 768px) {
   .landing-section {
     overflow: visible;
-
-    clip-path: (0px 9px -200px 0px);
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% calc(100% + 200px),
+      0 calc(100% + 200px)
+    );
   }
 
   .text-box h2 {
