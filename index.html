@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="icon" sizes="32x32" href="./assets/img/logo-travel-blog.svg">
+    <script src="./assets/js/submitBlocker.js" defer></script>
   </head>
   <body>
     <input type="radio" id="one" name="slider" checked />
@@ -194,21 +195,21 @@
           to hear from you and explore how we can work together.
         </p>
       </div>
-      <form action="">
+      <form id="formular" action="" novalidate>
         <div class="group">
           <div class="group-input">
             <label for="username">What's your name?</label>
-            <input type="text" id="username" required />
+            <input type="text" pattern=".{3,}" id="username" placeholder=" " required />
           </div>
           <div class="group-input">
             <label for="mail">What's your email?</label>
-            <input type="text" id="mail" required />
+            <input type="email" id="mail" placeholder=" " required />
           </div>
         </div>
         <div class="group">
           <div class="group-input">
             <label for="help">How can I help?</label>
-            <input type="text" id="help" required />
+            <input type="text" pattern=".{10,}" id="help" placeholder=" " required />
           </div>
         </div>
         <div class="confirm">
