@@ -177,6 +177,17 @@ details[open]::details-content {
     padding-top: 17px;
 }
 
+.group-input > input[type="email"] {
+    font-family: 'Palanquin';
+    color: #54370D;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #54370D;
+    outline: none;
+    padding-bottom: 17px;
+    padding-top: 17px;
+}
+
 .confirm {
     display: flex;
     flex-direction: column;
@@ -226,6 +237,10 @@ details[open]::details-content {
     vertical-align: middle;
 }
 
+input {
+    transition: background-color 0.3s ease, border-color 0.3s ease
+}
+
 
 input[type="checkbox"] {
     -webkit-appearance: none;
@@ -255,6 +270,28 @@ input[type="checkbox"]::before {
 input[type="checkbox"]:checked::before {
   transform: scale(1);
 }
+
+input.animate-invalid {
+    animation: flash-blue 0.8s ease-in-out;
+}
+
+@keyframes flash-blue {
+    0% {
+        background-color: #ffffff;
+        border-color: #cccccc;
+    }
+    40% {
+        background-color: #bbebff;
+        border-color: #77d7ff;    
+    }
+    100% {
+        background-color: #ffffff;
+        border-color: #cccccc;
+    }
+}
+
+
+
 
 @media screen and (max-width: 789px) {
     section {
