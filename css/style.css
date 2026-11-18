@@ -5,13 +5,7 @@
   clip-path: inset(0px 0px -200px 0px);
 
   margin-left: max(0px, calc((100% - 1440px) / 2));
-  margin-right: max(0px, calc((100% - 1440px) / 2));  
-
-  background-image: url(../assets/img/cappadocia1.png);
-
-  background-position: clamp(65%, calc(57.857% + 2.2321vw), 90%) center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  margin-right: max(0px, calc((100% - 1440px) / 2));
 
   overflow-x: clip;
   overflow-y: visible;
@@ -47,7 +41,7 @@
   width: 942px;
   position: absolute;
   top: 0px;
-  left: 0px;  
+  left: 0px;
   animation: yellow-curved 5s ease-in-out forwards;
   opacity: 0;
 }
@@ -82,7 +76,7 @@
   font-weight: 700;
   line-height: 120%;
   letter-spacing: 0%;
-  color: #54370d;  
+  color: #54370d;
   font-size: clamp(40px, calc(34.286px + 1.786vw), 60px);
 
   animation: text-box-h2 5s ease-in-out forwards;
@@ -98,7 +92,7 @@
   font-style: Medium;
   font-size: clamp(20px, calc(17.714px + 0.714vw), 28px);
   line-height: 110%;
-  letter-spacing: 0%;  
+  letter-spacing: 0%;
 }
 
 @keyframes text-box {
@@ -253,13 +247,12 @@
 }
 
 @media screen and (max-width: 768px) {
-
-.caroussel {
-  height: 160px;
-  width: 160px;
-  left: 100px;
-  top: -35px;
-}
+  .caroussel {
+    height: 160px;
+    width: 160px;
+    left: 100px;
+    top: -35px;
+  }
 
   @keyframes text-box {
     0% {
