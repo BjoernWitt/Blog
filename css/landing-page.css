@@ -217,6 +217,7 @@ details[open]::details-content {
 .confirm:has(#checker:checked) > input {
   color: black;
   border-color: black;
+  cursor: pointer;  
 }
 
 .submit-button {
