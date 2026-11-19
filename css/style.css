@@ -145,7 +145,6 @@ body {
     position: absolute;
     z-index: 1;
     height: 100%;
-    transform: translateX(50px);
 
     animation: bg-image-desktop 6s ease-in-out forwards;
   }
