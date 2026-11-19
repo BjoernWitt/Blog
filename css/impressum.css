@@ -30,3 +30,12 @@ main h2 {
 
   font-size: clamp(20px, calc(16.571px + 1.071vw), 32px);
 }
+
+@media (max-width: 768px) {
+  p,
+  h1,
+  h2 {
+    hyphens: auto;
+    overflow-wrap: break-word;
+  }
+}
