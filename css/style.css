@@ -5,6 +5,13 @@
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* Verhindert, dass animierte/skalierte Elemente die Seite nach rechts aufdehnen */
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -125,12 +132,7 @@ body {
     height: 533px;
 
     overflow: visible;
-    clip-path: polygon(
-      0 0,
-      100% 0,
-      100% calc(100% + 200px),
-      0 calc(100% + 200px)
-    );
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% + 200px), 0 calc(100% + 200px));
 
     display: flex;
     justify-content: center;

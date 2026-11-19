@@ -5,8 +5,17 @@
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* Verhindert, dass animierte/skalierte Elemente die Seite nach rechts aufdehnen */
+}
+
 body {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
@@ -26,6 +35,7 @@ body {
 .bg-image {
   z-index: 1;
   height: 515px;
+  width: 100%;
 
   animation: bg-image 6s ease-in-out forwards;
 }
@@ -115,13 +125,11 @@ body {
   @keyframes text-box {
     from {
       opacity: 1;
-      transform: translateX(clamp(18px, calc(-11.143px + 9.107vw), 120px))
-        translateY(-41px);
+      transform: translateX(clamp(18px, calc(-11.143px + 9.107vw), 120px)) translateY(-41px);
     }
     to {
       opacity: 1;
-      transform: translateX(clamp(18px, calc(-11.143px + 9.107vw), 120px))
-        translateY(-41px);
+      transform: translateX(clamp(18px, calc(-11.143px + 9.107vw), 120px)) translateY(-41px);
     }
   }
 
@@ -197,14 +205,12 @@ body {
     60%,
     80% {
       transform: scalex(1.1) scaley(0.93)
-        translateX(clamp(-300px, calc(-514.765px + 67.114vw), 0px))
-        translateY(-25px);
+        translateX(clamp(-300px, calc(-514.765px + 67.114vw), 0px)) translateY(-25px);
     }
 
     90%,
     100% {
-      transform: scaley(0.6)
-        translateX(clamp(-200px, calc(-343.177px + 44.743vw), 0px)) scaleX(0.7)
+      transform: scaley(0.6) translateX(clamp(-200px, calc(-343.177px + 44.743vw), 0px)) scaleX(0.7)
         translateY(-50px);
     }
   }
@@ -235,12 +241,7 @@ body {
 @media screen and (min-width: 768px) {
   .landing-section {
     overflow: visible;
-    clip-path: polygon(
-      0 0,
-      100% 0,
-      100% calc(100% + 200px),
-      0 calc(100% + 200px)
-    );
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% + 200px), 0 calc(100% + 200px));
   }
 
   .text-box h2 {
