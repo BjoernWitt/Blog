@@ -8,14 +8,14 @@ body {
 main {
   width: 100%;
   max-width: 1440px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 main p {
   color: #54370d;
   font-family: "Palanquin";
-/*  font-size: clamp(18px, calc(15.143px + 0.893vw), 28px);*/
   line-height: 120%;
-
 
   font-size: 24px;
   padding-bottom: 18px;    
@@ -25,7 +25,6 @@ main h2 {
   padding-top: 18px;
 
   color: #4ea487;
-/*  font-size: clamp(20px, calc(14.286px + 1.786vw), 40px);*/
   font-family: "Palanquin";
   font-weight: 600;
   line-height: 120%;
